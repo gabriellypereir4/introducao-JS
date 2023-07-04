@@ -9,8 +9,6 @@ var peso = tdPeso.textContent
 var tdAltura = paciente.querySelector(".info-altura")
 var altura = tdAltura.textContent
 
-console.log(paciente) // tr
-console.log(tdPeso) // td que tem o peso
-console.log(peso) // Obter 100
-console.log(tdAltura) // td que tem a altura
-console.log(altura) // Obter 2.00
+var imc = peso / (altura * altura) // 100 / 2.0 * 2.0 = 100 / 4 => 25
+
+console.log(imc)
