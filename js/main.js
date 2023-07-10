@@ -1,8 +1,13 @@
 let titulo = document.querySelector(".titulo");
 titulo.textContent = "Maçã";
 
-var paciente = document.querySelector("#primeiro-paciente")
+var pacientes = document.querySelectorAll(".paciente")
+console.log("Lista completa:" , pacientes)
 
+for(var i = 0; i < pacientes.length; i++){
+
+    var paciente = pacientes[i]
+    
 var tdPeso = paciente.querySelector(".info-peso")
 var peso = tdPeso.textContent
 
@@ -29,4 +34,8 @@ if(altura <= 0 || altura >= 3.00){
 if( alturaEValida && pesoEValido){
     var imc = peso / (altura * altura); 
     tdImc.textContent = imc;
+}
+
+    
+    
 }
