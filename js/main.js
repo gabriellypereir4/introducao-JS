@@ -23,14 +23,14 @@ if(peso <= 0 || peso >= 1000){
     console.log("Peso inválido!");
     pesoEValido = false;
     tdImc.textContent = "Peso inválido!";
-    paciente.style.backgroundColor = "lightcoral";
+    paciente.classList.add('paciente-invalido')
 }
 
 if(altura <= 0 || altura >= 3.00){
     console.log("Altura inválida!");
     alturaEValida = false;
     tdImc.textContent = "Altura inválida!"
-    paciente.style.backgroundColor = "lightcoral";
+    paciente.classList.add('paciente-invalido')
 }
 
 if( alturaEValida && pesoEValido){
