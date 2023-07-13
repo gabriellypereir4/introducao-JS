@@ -22,7 +22,8 @@ var alturaEValida = true;
 if(peso <= 0 || peso >= 1000){
     console.log("Peso inválido!");
     pesoEValido = false;
-    tdImc.textContent = "Peso inválido!"
+    tdImc.textContent = "Peso inválido!";
+    paciente.style.backgroundColor = "lightcoral";
 }
 
 if(altura <= 0 || altura >= 3.00){
