@@ -33,7 +33,7 @@ if(altura <= 0 || altura >= 3.00){
 
 if( alturaEValida && pesoEValido){
     var imc = peso / (altura * altura); 
-    tdImc.textContent = imc;
+    tdImc.textContent = imc.toFixed(2);
 }
 
     
