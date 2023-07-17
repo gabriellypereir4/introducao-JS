@@ -36,8 +36,11 @@ if(altura <= 0 || altura >= 3.00){
 if( alturaEValida && pesoEValido){
     var imc = peso / (altura * altura); 
     tdImc.textContent = imc.toFixed(2);
+}   
+
 }
 
-    
-    
-}
+var botaoAdicionar = document.querySelector("#adicionar-paciente")
+botaoAdicionar.addEventListener('click', function(){
+    console.log('Oi')
+})
