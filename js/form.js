@@ -4,10 +4,8 @@ botaoAdicionar.addEventListener('click', function(event){
     
     var form = document.querySelector('#form-adiciona')
     // extraindo informações do paciente do form
-    var nome = form.nome.value
-    var peso = form.peso.value
-    var altura = form.altura.value
-    var gordura = form.gordura.value
+    var paciente = obtemPacienteDoFormulario(form)
+
 
     // cria a tr e a td do paciente
     var pacienteTr = document.createElement('tr')
@@ -35,3 +33,17 @@ botaoAdicionar.addEventListener('click', function(event){
 
     tabela.appendChild(pacienteTr)
 })
+
+
+function obtemPacienteDoFormulario(form){
+
+    var paciente = {
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+        imc: calculaImc(form.peso.value, form.altura.value)
+    }
+
+    return paciente
+}
