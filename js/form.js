@@ -1,4 +1,4 @@
-var botaoAdicionar = document.querySelector("#adicionar-paciente")
+var botaoAdicionar = document.querySelector('#adicionar-paciente')
 botaoAdicionar.addEventListener('click', function(event){
     event.preventDefault()
     
@@ -32,6 +32,7 @@ function obtemPacienteDoFormulario(form){
 
 function montaTr(paciente){
     var pacienteTr = document.createElement('tr')
+
 
     var nomeTd = document.createElement('td')
     var pesoTd = document.createElement('td')
