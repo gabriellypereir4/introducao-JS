@@ -6,7 +6,6 @@ botaoAdicionar.addEventListener('click', function(event){
     // extraindo informações do paciente do form
     var paciente = obtemPacienteDoFormulario(form)
 
-
     // cria a tr e a td do paciente
     var pacienteTr = montaTr(paciente)
     
