@@ -3,7 +3,7 @@ let titulo = document.querySelector('.titulo')
 
 let pacientes = document.querySelectorAll('.paciente') // All pega todos as classes
 
-for(let i = 0; i < pacientes.length; i++){
+for(let i = 0; i < pacientes.length; i++){ //for vai pecorrer pela lista
 
     let paciente = pacientes[i]
     
