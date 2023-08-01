@@ -1,22 +1,22 @@
 let titulo = document.querySelector('.titulo')
 titulo.textContent = 'Maçã'
 
-var pacientes = document.querySelectorAll('.paciente')
+let pacientes = document.querySelectorAll('.paciente')
 
-for(var i = 0; i < pacientes.length; i++){
+for(let i = 0; i < pacientes.length; i++){
 
-    var paciente = pacientes[i]
+    let paciente = pacientes[i]
     
-var tdPeso = paciente.querySelector('.info-peso')
-var peso = tdPeso.textContent
+let tdPeso = paciente.querySelector('.info-peso')
+let peso = tdPeso.textContent
 
-var tdAltura = paciente.querySelector('.info-altura')
-var altura = tdAltura.textContent
+let tdAltura = paciente.querySelector('.info-altura')
+let altura = tdAltura.textContent
 
-var tdImc = paciente.querySelector('.info-imc')
+let tdImc = paciente.querySelector('.info-imc')
 
-var pesoEValido = validaPeso(peso)
-var alturaEValida = true
+let pesoEValido = validaPeso(peso)
+let alturaEValida = validaAltura(altura)
 
 if(!pesoEValido){
     console.log('Peso inválido!')
@@ -25,7 +25,7 @@ if(!pesoEValido){
     paciente.classList.add('paciente-invalido')
 }
 
-if(altura <= 0 || altura >= 3.00){
+if(!alturaEValida){
     console.log('Altura inválida!')
     alturaEValida = false
     tdImc.textContent = 'Altura inválida!'
@@ -33,7 +33,7 @@ if(altura <= 0 || altura >= 3.00){
 }
 
 if( alturaEValida && pesoEValido){
-    var imc = calculaImc(peso, altura)
+    let imc = calculaImc(peso, altura)
     tdImc.textContent = imc
 }   
 
@@ -47,8 +47,16 @@ function validaPeso(peso){
     }
 }
 
+function validaAltura(altura){
+    if(altura >=0 && altura <= 3.0){
+        return true
+    }else{
+        return false
+    }
+}
+
 function calculaImc(peso,altura){
-    var imc = 0
+    let imc = 0
 
     imc = peso / (altura * altura)
 
