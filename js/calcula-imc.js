@@ -15,10 +15,10 @@ var altura = tdAltura.textContent
 
 var tdImc = paciente.querySelector('.info-imc')
 
-var pesoEValido = true
+var pesoEValido = validaPeso(peso)
 var alturaEValida = true
 
-if(peso <= 0 || peso >= 1000){
+if(!pesoEValido){
     console.log('Peso inválido!')
     pesoEValido = false
     tdImc.textContent = 'Peso inválido!'
@@ -37,6 +37,14 @@ if( alturaEValida && pesoEValido){
     tdImc.textContent = imc
 }   
 
+}
+
+function validaPeso(peso){
+    if(peso >= 0 && peso < 1000){
+        return true
+    }else{
+        return false
+    }
 }
 
 function calculaImc(peso,altura){
