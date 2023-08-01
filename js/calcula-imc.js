@@ -1,5 +1,5 @@
 let titulo = document.querySelector('.titulo')
-titulo.textContent = 'Maçã'
+//titulo.textContent = 'Maçã' //muda o conteúdo da classe título para Maçã
 
 let pacientes = document.querySelectorAll('.paciente')
 
