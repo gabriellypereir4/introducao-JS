@@ -3,9 +3,9 @@ let titulo = document.querySelector('.titulo')
 
 let pacientes = document.querySelectorAll('.paciente') // All pega todos as classes
 
-for(let i = 0; i < pacientes.length; i++){ //for vai pecorrer pela lista
+for(let contador = 0; contador < pacientes.length; contador++){ //for vai pecorrer pela lista
 
-    let paciente = pacientes[i]
+    let paciente = pacientes[contador]
     
 let tdPeso = paciente.querySelector('.info-peso')
 let peso = tdPeso.textContent
