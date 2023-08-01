@@ -1,7 +1,7 @@
 let titulo = document.querySelector('.titulo')
 //titulo.textContent = 'Maçã' //muda o conteúdo da classe título para Maçã
 
-let pacientes = document.querySelectorAll('.paciente')
+let pacientes = document.querySelectorAll('.paciente') // All pega todos as classes
 
 for(let i = 0; i < pacientes.length; i++){
 
